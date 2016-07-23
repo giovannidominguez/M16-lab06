@@ -1,3 +1,5 @@
+Bryanna Phan's lab06 Javadoc: https://ucsb-cs56-m16.github.io/lab06_javadoc_bryannaphan/javadoc/index.html
+
 # M16_lab06
 
 Base repository for CS56 W16 lab06 (Open Source)
