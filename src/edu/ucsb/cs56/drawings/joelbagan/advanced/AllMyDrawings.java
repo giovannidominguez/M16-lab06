@@ -140,11 +140,16 @@ public class AllMyDrawings {
         g2.drawString("And here we observe some GameBoys in their natural habitat by Joel Bagan", 20, 20);
 
         GameBoyWithDisplay large = new GameBoyWithDisplay(200, 50, 225, 150);
-        GameBoy small = new GameBoy(120, 50, 40, 30);
+        GameBoy small = new GameBoy(120, 150, 40, 30);
 
         g2.setColor(Color.RED);
         g2.draw(large);
         g2.setColor(Color.blue);
         g2.draw(small);
+        g2.setColor(Color());
+        for(int i = 0; i < 9; i++){
+            GameBoy green = new GameBoy(90*i,300,90,150);
+            g2.draw(green);
+        }
     }
 }
