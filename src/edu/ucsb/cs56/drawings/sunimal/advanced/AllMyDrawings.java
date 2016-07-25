@@ -23,22 +23,22 @@ public class AllMyDrawings {
 
 	public static void drawPicture1(Graphics2D g2) {
 
-		House h1 = new House(100, 250, 50, 75);
+		Rocket r1 = new Rocket(100, 250, 50, 150);
 		g2.setColor(Color.CYAN);
-		g2.draw(h1);
+		g2.draw(r1);
 
-		// Make a black house that's half the size,
+		// Make a black rocket that's half the size,
 		// and moved over 150 pixels in x direction
 
-		Shape h2 = ShapeTransforms.scaledCopyOfLL(h1, 0.5, 0.5);
-		h2 = ShapeTransforms.translatedCopyOf(h2, 150, 0);
+		Shape r2 = ShapeTransforms.scaledCopyOfLL(r1, 0.5, 0.5);
+		r2 = ShapeTransforms.translatedCopyOf(r2, 150, 0);
 		g2.setColor(Color.BLACK);
-		g2.draw(h2);
+		g2.draw(r2);
 
-		// Here's a house that's 4x as big (2x the original)
+		// Here's a rocket that's 4x as big (2x the original)
 		// and moved over 150 more pixels to right.
-		h2 = ShapeTransforms.scaledCopyOfLL(h2, 4, 4);
-		h2 = ShapeTransforms.translatedCopyOf(h2, 150, 0);
+		r2 = ShapeTransforms.scaledCopyOfLL(r2, 4, 4);
+		r2 = ShapeTransforms.translatedCopyOf(r2, 150, 0);
 
 		// We'll draw this with a thicker stroke
 		Stroke thick = new BasicStroke(4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
@@ -51,22 +51,22 @@ public class AllMyDrawings {
 		Stroke orig = g2.getStroke();
 		g2.setStroke(thick);
 		g2.setColor(new Color(0x002FA7));
-		g2.draw(h2);
+		g2.draw(r2);
 
-		// Draw two houses with Windows
+		// Draw two rockets with booster
 
-		HouseWithWindows hw1 = new HouseWithWindows(50, 350, 40, 75);
-		HouseWithWindows hw2 = new HouseWithWindows(200, 350, 200, 100);
+		RocketWithBooster rb1 = new RocketWithBooster(50, 350, 40, 240);
+		RocketWithBooster rb2 = new RocketWithBooster(200, 350, 200, 400);
 
-		g2.draw(hw1);
+		g2.draw(rb1);
 		g2.setColor(new Color(0x8F00FF));
-		g2.draw(hw2);
+		g2.draw(rb2);
 
 		// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 
 		g2.setStroke(orig);
 		g2.setColor(Color.BLACK);
-		g2.drawString("A few houses by Phill Conrad", 20, 20);
+		g2.drawString("A few Rockets by Sunimal", 20, 20);
 	}
 
 	/**
@@ -75,7 +75,20 @@ public class AllMyDrawings {
 	public static void drawPicture2(Graphics2D g2) {
 
 		// Draw some coffee cups.
-
+		
+		RocketWithBooster rb1= new RocketWithBooster(250,300,50,150);
+		g2.setColor(Color.RED);
+		g2.draw(rb1);
+		
+		//Shape rb2 = ShapeTransforms.rotatedCopyOf(rb1, Math.PI / 4.0);
+		//g2.draw(rb2);
+		
+		Shape rb3 = ShapeTransforms.verticallyFlippedCopyOf(rb1);
+		g2.draw(rb3);
+		
+		Shape rb4 = ShapeTransforms.rotatedCopyOf(rb1,Math.PI / 2.0);
+		g2.draw(rb4);
+		/*	
 		CoffeeCup large = new CoffeeCup(100, 50, 225, 150);
 		CoffeeCup smallCC = new CoffeeCup(20, 50, 40, 30);
 		CoffeeCup tallSkinny = new CoffeeCup(20, 150, 20, 40);
@@ -89,7 +102,8 @@ public class AllMyDrawings {
 		g2.draw(tallSkinny);
 		g2.setColor(Color.MAGENTA);
 		g2.draw(shortFat);
-
+		*/
+		/*
 		House h1 = new House(100, 250, 50, 75);
 		g2.setColor(Color.CYAN);
 		g2.draw(h1);
@@ -137,6 +151,9 @@ public class AllMyDrawings {
 		g2.setStroke(orig);
 		g2.setColor(Color.BLACK);
 		g2.drawString("A bunch of Coffee Cups and a few houses by Phill Conrad", 20, 20);
+		*/
+		g2.drawString("A bunch of rockets by Sunimal", 20, 20);
+		
 	}
 
 	/**
