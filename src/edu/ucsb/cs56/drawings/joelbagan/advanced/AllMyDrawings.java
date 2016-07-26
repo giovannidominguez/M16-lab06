@@ -14,6 +14,7 @@ import java.awt.*;
 public class AllMyDrawings {
     /**
      * Draw a picture with a few GameBoys
+     * @param g2 Graphics reference used to draw the GameBoys
      */
 
     public static void drawPicture1(Graphics2D g2) {
@@ -51,7 +52,8 @@ public class AllMyDrawings {
     }
 
     /**
-     * Draw a picture of some GameBoys and GameBoys with displays
+     * Draw some avant garde type stuff with GameBoys of different colors, shapes, sizes, and thicknesses
+     * @param g2 Graphics reference used to draw the GameBoys
      */
     public static void drawPicture2(Graphics2D g2) {
 
@@ -79,20 +81,16 @@ public class AllMyDrawings {
         g2.setColor(Color.BLACK);
         g2.draw(gbd2);
 
-        // Here's a house that's 4x as big (2x the original)
-        // and moved over 150 more pixels to right.
-        gbd2 = ShapeTransforms.scaledCopyOfLL(gbd2, 4, 4);
+
+        gbd2 = ShapeTransforms.scaledCopyOfLL(gbd2, 5, 5);
         gbd2 = ShapeTransforms.translatedCopyOf(gbd2, 150, 0);
 
-        // We'll draw this with a thicker stroke
-        Stroke thick = new BasicStroke(4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
+        Stroke thick = new BasicStroke(5.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
 
         Stroke orig = g2.getStroke();
         g2.setStroke(thick);
         g2.setColor(new Color(0x002FA7));
         g2.draw(gbd2);
-
-        // Draw two houses with Windows
 
         GameBoyWithDisplay gbd4 = new GameBoyWithDisplay(50, 350, 40, 75);
         GameBoyWithDisplay gbd5 = new GameBoyWithDisplay(200, 350, 200, 100);
@@ -100,8 +98,7 @@ public class AllMyDrawings {
         g2.draw(gbd4);
         g2.setColor(new Color(0x8F00FF));
 
-        // Rotate the second house 45 degrees around its center.
-        Shape hw3 = ShapeTransforms.rotatedCopyOf(gbd5, Math.PI / 4.0);
+        Shape hw3 = ShapeTransforms.rotatedCopyOf(gbd5, Math.PI / 2);
         hw3 = ShapeTransforms.translatedCopyOf(hw3, -50, -200);
 
         g2.draw(hw3);
@@ -112,7 +109,8 @@ public class AllMyDrawings {
     }
 
     /**
-     * Draw a different picture with a few houses and coffee cups
+     * Draw a momma GameBoy with her young calf in the grasslands
+     * @param g2 Graphics reference used to draw the GameBoys
      */
     public static void drawPicture3(Graphics2D g2) {
         // label the drawing
@@ -128,7 +126,8 @@ public class AllMyDrawings {
         g2.setColor(new Color(0x0B650C));
         for(int i = 0; i < 9; i++){
             GameBoy green = new GameBoy(90*i,300,90,150);
-            g2.draw(green);
+            Shape greenBoy = ShapeTransforms.rotatedCopyOf(green, Math.PI / 4);
+            g2.draw(greenBoy);
         }
     }
 }
