@@ -22,32 +22,20 @@ public class AllMyDrawings {
         g2.setColor(Color.BLUE);
         g2.draw(gb1);
 
-        // Make a black house that's half the size,
-        // and moved over 150 pixels in x direction
-
         Shape gb2 = ShapeTransforms.scaledCopyOfLL(gb1, 0.5, 0.5);
         gb2 = ShapeTransforms.translatedCopyOf(gb2, 150, 0);
         g2.setColor(Color.BLACK);
         g2.draw(gb2);
 
-        // Here's a house that's 4x as big (2x the original)
-        // and moved over 150 more pixels to right.
         gb2 = ShapeTransforms.scaledCopyOfLL(gb2, 4, 4);
         gb2 = ShapeTransforms.translatedCopyOf(gb2, 150, 50);
 
-        // We'll draw this with a thicker stroke
         Stroke thick = new BasicStroke(4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
-
-        // for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-        // #002FA7 is "International Klein Blue" according to Wikipedia
-        // In HTML we use #, but in Java (and C/C++) its 0x
 
         Stroke orig = g2.getStroke();
         g2.setStroke(thick);
         g2.setColor(new Color(0x002FA7));
         g2.draw(gb2);
-
-        // Draw 2 GameBoys with display
 
         GameBoyWithDisplay gd1 = new GameBoyWithDisplay(100, 130, 100, 200);
         GameBoyWithDisplay gd2 = new GameBoyWithDisplay(210, 200, 100, 200);
@@ -62,13 +50,10 @@ public class AllMyDrawings {
         g2.drawString("An artful arrangement of GameBoys by Joel Bagan", 20, 20);
     }
 
-
     /**
      * Draw a picture of some GameBoys and GameBoys with displays
      */
     public static void drawPicture2(Graphics2D g2) {
-
-        // Draw some coffee cups.
 
         GameBoy top = new GameBoy(320, 10, 100, 100);
         GameBoy right = new GameBoy(600, 240, 40, 80);
@@ -88,8 +73,6 @@ public class AllMyDrawings {
         g2.setColor(Color.green);
         g2.draw(gbd1);
 
-        // Make a black house that's half the size,
-        // and moved over 150 pixels in x direction
         Shape gbd2 = ShapeTransforms.scaledCopyOfLL(gbd1, 0.5, 0.5);
         gbd2 = ShapeTransforms.translatedCopyOf(gbd2, 150, 0);
         gbd2 = ShapeTransforms.rotatedCopyOf(gbd2, Math.PI);
@@ -103,10 +86,6 @@ public class AllMyDrawings {
 
         // We'll draw this with a thicker stroke
         Stroke thick = new BasicStroke(4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
-
-        // for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-        // #002FA7 is "International Klein Blue" according to Wikipedia
-        // In HTML we use #, but in Java (and C/C++) its 0x
 
         Stroke orig = g2.getStroke();
         g2.setStroke(thick);
@@ -146,7 +125,7 @@ public class AllMyDrawings {
         g2.draw(large);
         g2.setColor(Color.blue);
         g2.draw(small);
-        g2.setColor(Color());
+        g2.setColor(new Color(0x0B650C));
         for(int i = 0; i < 9; i++){
             GameBoy green = new GameBoy(90*i,300,90,150);
             g2.draw(green);
