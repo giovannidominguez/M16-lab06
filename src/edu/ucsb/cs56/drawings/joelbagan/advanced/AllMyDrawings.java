@@ -14,9 +14,9 @@ import java.awt.*;
 public class AllMyDrawings {
     /**
      * Draw a picture with a few GameBoys
+     *
      * @param g2 Graphics reference used to draw the GameBoys
      */
-
     public static void drawPicture1(Graphics2D g2) {
 
         GameBoy gb1 = new GameBoy(10, 50, 50, 75);
@@ -53,6 +53,7 @@ public class AllMyDrawings {
 
     /**
      * Draw some avant garde type stuff with GameBoys of different colors, shapes, sizes, and thicknesses
+     *
      * @param g2 Graphics reference used to draw the GameBoys
      */
     public static void drawPicture2(Graphics2D g2) {
@@ -110,6 +111,7 @@ public class AllMyDrawings {
 
     /**
      * Draw a momma GameBoy with her young calf in the grasslands
+     *
      * @param g2 Graphics reference used to draw the GameBoys
      */
     public static void drawPicture3(Graphics2D g2) {
@@ -124,8 +126,8 @@ public class AllMyDrawings {
         g2.setColor(Color.blue);
         g2.draw(small);
         g2.setColor(new Color(0x0B650C));
-        for(int i = 0; i < 9; i++){
-            GameBoy green = new GameBoy(90*i,300,90,150);
+        for (int i = 0; i < 9; i++) {
+            GameBoy green = new GameBoy(90 * i, 300, 90, 150);
             Shape greenBoy = ShapeTransforms.rotatedCopyOf(green, Math.PI / 4);
             g2.draw(greenBoy);
         }

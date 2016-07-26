@@ -13,6 +13,17 @@ import java.awt.geom.GeneralPath;
  * @version CS56 M16 UCSB
  */
 public class GameBoyWithDisplay extends GameBoy implements Shape {
+
+    /**
+     * Constructor that calls super to create base GameBoy, then creates the
+     * floor, cloud, and mountain to be displayed on the screen and moves/scales
+     * parts according to parameters
+     *
+     * @param x      x coordinate for the GameBoy
+     * @param y      y coordinate for the GameBoy
+     * @param width  width of the GameBoy
+     * @param height height of the GameBoy
+     */
     public GameBoyWithDisplay(double x, double y, double width, double height) {
         super(x, y, width, height);
         GeneralPath gp = this.get();
@@ -22,12 +33,14 @@ public class GameBoyWithDisplay extends GameBoy implements Shape {
         this.set(gp);
     }
 
-    /**Method to make the mountain on the GameBoy display area
-     * @param x x coordinate for the GameBoy
-     * @param y y coordinate for the GameBoy
-     * @param width width of the GameBoy
+    /**
+     * Method to make the mountain on the GameBoy display area
+     *
+     * @param x      x coordinate for the GameBoy
+     * @param y      y coordinate for the GameBoy
+     * @param width  width of the GameBoy
      * @param height height of the GameBoy
-     * @param gp GeneralPath that the mountain is appended to
+     * @param gp     GeneralPath that the mountain is appended to
      */
     private void makeMountain(double x, double y, double width, double height, GeneralPath gp) {
         GeneralPath mountain = new GeneralPath();
@@ -40,11 +53,12 @@ public class GameBoyWithDisplay extends GameBoy implements Shape {
 
     /**
      * Method to make the cloud on the GameBoy display area
-     * @param x x coordinate for the GameBoy
-     * @param y y coordinate for the GameBoy
-     * @param width width of the GameBoy
+     *
+     * @param x      x coordinate for the GameBoy
+     * @param y      y coordinate for the GameBoy
+     * @param width  width of the GameBoy
      * @param height height of the GameBoy
-     * @param gp GeneralPath that the mountain is appended to
+     * @param gp     GeneralPath that the mountain is appended to
      */
     private void makeCloud(double x, double y, double width, double height, GeneralPath gp) {
         Shape cloud = new Ellipse2D.Double(x + width / 3.5, y + height / 6, width / 3, height / 9);
@@ -53,11 +67,12 @@ public class GameBoyWithDisplay extends GameBoy implements Shape {
 
     /**
      * Method to make the floor on the GameBoy display area
-     * @param x x coordinate for the GameBoy
-     * @param y y coordinate for the GameBoy
-     * @param width width of the GameBoy
+     *
+     * @param x      x coordinate for the GameBoy
+     * @param y      y coordinate for the GameBoy
+     * @param width  width of the GameBoy
      * @param height height of the GameBoy
-     * @param gp GeneralPath that the mountain is appended to
+     * @param gp     GeneralPath that the mountain is appended to
      */
     private void makeFloor(double x, double y, double width, double height, GeneralPath gp) {
         GeneralPath floor = new GeneralPath();

@@ -19,7 +19,8 @@ import java.awt.geom.RoundRectangle2D;
  */
 public class GameBoy extends GeneralPathWrapper implements Shape {
     /**
-     * Constructor
+     * Constructor that creates a hardcoded GameBoy, then translates and scales
+     * according to parameters
      *
      * @param x      x coord of lower left corner of gameboy
      * @param y      y coord of lower left corner of gameboy
