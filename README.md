@@ -27,3 +27,11 @@ To run one of those tasks, overriding the student's CSIL id to jgaucho, use, for
 
 You can test this with studentName set to <code>pconrad</code>, <code>andrewberls</code>, or <code>jstaahl</code> as examples.   All of those should work on pconrad, though only the MPV tasks will work for the other two.
 
+# FEEDBACK REPOS:
+* https://github.com/UCSB-CS56-M16/FEEDBACK_joelbagan_lab06
+* https://github.com/UCSB-CS56-M16/FEEDBACK_bryannaphan_lab06
+* https://github.com/UCSB-CS56-M16/FEEDBACK_giovannidominguez_lab06
+* https://github.com/UCSB-CS56-M16/FEEDBACK_issacholguin_lab06
+* https://github.com/UCSB-CS56-M16/FEEDBACK_EdieS_lab06
+* https://github.com/UCSB-CS56-M16/FEEDBACK_jhpenger_lab06
+
